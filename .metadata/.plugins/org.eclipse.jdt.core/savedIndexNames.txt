@@ -1,0 +1,2 @@
+INDEX VERSION 1.132+C:\Users\eguil\OneDrive\Área de Trabalho\edlog-api-spring\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
