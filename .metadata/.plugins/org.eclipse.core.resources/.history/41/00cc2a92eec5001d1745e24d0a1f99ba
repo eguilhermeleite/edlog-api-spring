@@ -1,0 +1,5 @@
+package com.edlog.api.domain;
+
+public class Client {
+
+}

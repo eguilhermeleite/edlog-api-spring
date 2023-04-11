@@ -1,0 +1,29 @@
+package com.edlog.api.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Embeddable
+public class Recipient {
+
+	@Column(name = "recip-nam")
+	private String name;
+	
+	@Column(name = "recip-pup")
+	private String publicPlace;
+	
+	@Column(name = "recip-num")
+	private String number;
+	
+	@Column(name = "recip-com")
+	private String complement;
+	
+	@Column(name = "recip-nei")
+	private String neighborhood;
+}
+

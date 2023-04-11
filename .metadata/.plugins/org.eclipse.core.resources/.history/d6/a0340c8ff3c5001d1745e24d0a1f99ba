@@ -1,0 +1,5 @@
+package com.edlog.api.service;
+
+public class ClientService {
+
+}

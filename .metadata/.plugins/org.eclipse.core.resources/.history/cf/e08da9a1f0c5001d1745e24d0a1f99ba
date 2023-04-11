@@ -1,0 +1,17 @@
+package com.edlog.api.domain;
+
+import javax.persistence.Entity;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@EqualsAndHashCode
+@Entity
+public class Client {
+	private Long id;
+	private String name,email,phone;
+
+}

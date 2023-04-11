@@ -1,0 +1,19 @@
+package com.edlog.api.domain;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import com.edlog.api.enums.DeliveryStatus;
+
+public class Delivery {
+	
+	private Long id;
+	private Client client;
+	private Recipient recipient;
+	private BigDecimal rate;
+	private DeliveryStatus deliveryStatus;
+	private LocalDateTime requestDate;
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.edlog.api.exception;
+
+public class GlobaExceptionHandler {
+
+}

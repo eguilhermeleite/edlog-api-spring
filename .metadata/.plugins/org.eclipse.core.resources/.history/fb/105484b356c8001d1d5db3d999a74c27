@@ -1,0 +1,11 @@
+package com.edlog.api.domain;
+
+public class Recipient {
+
+	private String name;
+	private String publicPlace;
+	private String number;
+	private String complement;
+	private String neighborhood;
+}
+

@@ -1,0 +1,34 @@
+package com.edlog.api.service;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.edlog.api.domain.Client;
+import com.edlog.api.domain.Delivery;
+import com.edlog.api.enums.DeliveryStatus;
+import com.edlog.api.repository.ClientRepository;
+import com.edlog.api.repository.DeliveryRepository;
+
+@Service
+public class DeliveryService {
+	
+	@Autowired
+	private DeliveryRepository deliveryRepository;
+	
+	@Autowired
+	private ClientRepository clientRepository;
+	
+	@Transactional
+	public Delivery request(Delivery delivery) {
+		
+		Client client = clientRepository.findById(delivery.getClient().getId()).orElseThrow(null);
+		
+		delivery.setDeliveryStatus(DeliveryStatus.PENDING);
+		delivery.setRequestDate(LocalDateTime.now());
+		return deliveryRepository.save(delivery);
+	}
+
+}

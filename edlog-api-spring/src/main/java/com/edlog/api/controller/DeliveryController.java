@@ -1,0 +1,30 @@
+package com.edlog.api.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.edlog.api.domain.Delivery;
+import com.edlog.api.service.DeliveryService;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+@RequestMapping("/deliveries")
+public class DeliveryController {
+	
+	@Autowired
+	private DeliveryService deliveryService;
+	
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public Delivery createDelivery(@RequestBody Delivery delivery) throws Exception {
+		return deliveryService.request(delivery);
+	}
+
+}

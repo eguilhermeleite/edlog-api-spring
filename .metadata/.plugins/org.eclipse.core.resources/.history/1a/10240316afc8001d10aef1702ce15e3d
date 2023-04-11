@@ -1,0 +1,41 @@
+package com.edlog.api.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Embeddable
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+public class Recipient {
+	
+	@EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "recipNam")
+	private String name;
+	
+	@Column(name = "recipPup")
+	private String publicPlace;
+	
+	@Column(name = "recipNum")
+	private String number;
+	
+	@Column(name = "recipCom")
+	private String complement;
+	
+	@Column(name = "recipNei")
+	private String neighborhood;
+}
+

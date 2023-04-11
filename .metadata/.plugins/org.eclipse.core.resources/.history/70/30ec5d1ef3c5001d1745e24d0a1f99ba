@@ -1,0 +1,9 @@
+package com.edlog.api.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.edlog.api.domain.Client;
+
+public interface ClientRepository extends JpaRepository<Client, Long>{
+
+}
